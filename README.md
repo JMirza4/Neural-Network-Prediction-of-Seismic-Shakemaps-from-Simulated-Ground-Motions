@@ -33,7 +33,7 @@ Shakemap generation is framed as a scalar-to-image regression problem. Model fea
 Final loss function is a normalized channel-wise L2 loss on RGB pixel intensities...  
 L = E [ (1/3) ∑_c ||Y_c − Ŷ_c||₂ / (||Y||₂ + ε) ]
 
-Quantitiative performance metrics are the "Mean Score" (MS) and "Stdv Score" (SS). These are aggregate metrics of the average and standard deviation of the per-example Mean Absolute Pixel Error (MAPE) and Structural Similarity Index (SSIM)...  
+Quantitative performance metrics are the "Mean Score" (MS) and "Stdv Score" (SS). These are aggregate metrics of the average and standard deviation of the per-example Mean Absolute Pixel Error (MAPE) and Structural Similarity Index (SSIM)...  
 MS = 0.5[(1 - average(MAPE)) + average(SSIM)]   --->   Greater MS is better  
 SS = 0.5*[stdv(MAPE) + stdv(SSIM)]   --->   Lesser SS is better
 
@@ -45,3 +45,4 @@ https://usgs.maps.arcgis.com/apps/webappviewer/index.html?id=8ac19bc334f747e4865
 (3) To use the produced shakemap image for risk-response planning, lower the pimage opacity and lay it over a map of the specified region (use shakemap center point latitude and longitude to anchor the placement)
 
 (4) For Shakemap_Data_Generator.ipynb and model files, must update file path variables 
+
