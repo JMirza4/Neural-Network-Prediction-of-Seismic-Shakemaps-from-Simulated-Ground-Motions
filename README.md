@@ -43,7 +43,8 @@ SS = 0.5*[stdv(MAPE) + stdv(SSIM)]   --->   Lesser SS is better
 https://usgs.maps.arcgis.com/apps/webappviewer/index.html?id=8ac19bc334f747e486550f32837578e1  
 (2) All kernel's and output cleared for all model files excpet Final_Model.ipynb  
 (3) To use the produced shakemap image for risk-response planning, lower the image opacity and lay it over a map of the specified region (use shakemap center point latitude and longitude to anchor the placement)  
-(4) For Shakemap_Data_Generator.ipynb and model files, must update file path variables 
+(4) Within Shakemap_Data_Generator.ipynb and model files, must update file path variables 
+
 
 
 
