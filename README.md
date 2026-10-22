@@ -28,7 +28,7 @@ A convolutional neural network that predicts regional earthquake shakemap images
 ```
 
 ## Technical Overview
-Shakemap generation is framed as a scalar-to-image regression problem. Model features include relevant earthquake rupture and site soil parameters for all discrete points in the shaking region: earthquake magnitude, distance to rupture, site soil Vs30, longitude, latitude. Output is an RGB (0 to 1 pixel intensities) shakemap for a 24.05 km x 24.05 km area/region. representing the peak ground accelerations experienced in the region. The final model type is a 9-layer CNN with per-example input volume of 75x75x5 (shakemap is discretized into 75x75 grid with each point having 5 input parameters) and output volume of 75x75x3 (75x75 resolution RGB images).
+Shakemap generation is framed as a scalar-to-image regression problem. Model features include relevant earthquake rupture and site soil parameters for all discrete points in the shaking region: earthquake magnitude, distance to rupture, site soil Vs30, longitude, latitude. Output is an RGB (0 to 1 pixel intensities) shakemap for a 24.05 km x 24.05 km area/region, which shows the peak ground accelerations experienced at all points in the region. The final model type is a 9-layer CNN with per-example input volume of 75x75x5 (shakemap is discretized into 75x75 grid with each point having 5 input parameters) and output volume of 75x75x3 (75x75 resolution RGB images).
 
 Final loss function is a normalized channel-wise L2 loss on RGB pixel intensities...  
 L = E [ (1/3) ∑_c ||Y_c − Ŷ_c||₂ / (||Y||₂ + ε) ]
